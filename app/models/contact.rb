@@ -2,7 +2,7 @@ class Contact < ActiveRecord::Base
   validates :name, presence: true, uniqueness: {scope: :email}
   validates :email, presence: true, uniqueness: {scope: :name}
 
-  validates :user_id, presence: true, uniqueness: true
+  validates :user_id, presence: true
 
 
   belongs_to(
